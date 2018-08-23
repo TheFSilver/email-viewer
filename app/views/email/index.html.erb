@@ -10,7 +10,12 @@
       </div>
       <div class="col-9 ">
         <% @email.each do |email| %>
+<<<<<<< HEAD
           <div class="container contenu">
+=======
+        <div class="container contenu">
+          <%= link_to " Delete", "#", class: "btn btn-sm btn-danger bouton far fa-trash-alt", remote: true %>
+>>>>>>> master
           <h3><%= email.object %></h3>
           <hr>
           <p><%= email.body %></p>
