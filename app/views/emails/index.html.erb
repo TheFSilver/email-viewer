@@ -3,15 +3,15 @@
     <div class="row viewer">
       <div class="col-3 liste">
         <div class="list-group">
-          <% @email.each do |email| %>
+          <% @emails.each do |email| %>
             <%= link_to "#{email.object}", "#", class: 'list-group-item list-group-item-action', remote: true %>
           <% end %>
         </div>
       </div>
       <div class="col-9 ">
-        <% @email.each do |email| %>
+        <% @emails.each do |email| %>
         <div class="container contenu">
-          <%= link_to " Delete", "#", class: "btn btn-sm btn-danger bouton far fa-trash-alt", remote: true %>
+          <%= link_to " Delete", email_path(email),  class: "btn btn-sm btn-danger bouton far fa-trash-alt", remote: true, method: :delete %>
           <h3><%= email.object %></h3>
           <hr>
           <p><%= email.body %></p>
