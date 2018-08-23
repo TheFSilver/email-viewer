@@ -1,4 +1,4 @@
-class EmailController < ApplicationController
+class EmailsController < ApplicationController
   def index
     @email = Email.all
   end
@@ -8,6 +8,6 @@ class EmailController < ApplicationController
   end
 
   def destroy
-    @email = Email.find(params[:id])
+    @email = Email.destroy(params[:id])
   end
 end

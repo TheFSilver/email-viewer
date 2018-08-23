@@ -9,7 +9,10 @@
         </div>
       </div>
       <div class="col-9 ">
-        <%= render 'email/contenu' %>
+        <% email = [] %>
+        <% if !email[0].nil? %>
+        <%= render 'emails/contenu' %>
+        <% end %>
       </div>
     </div>
   </div>
