@@ -4,19 +4,12 @@
       <div class="col-3 liste">
         <div class="list-group">
           <% @email.each do |email| %>
-            <%= link_to "#{email.object}", email_path(email, email_id: email.id), class: 'show list-group-item list-group-item-action', remote: true %>
+            <%= link_to "#{email.object}", email_path(email, email_id: email.id), class: 'show list-group-item list-group-item-action', remote: true, method: :delelte %>
           <% end %>
         </div>
       </div>
       <div class="col-9 ">
-        <% @email.each do |email| %>
-        <div class="container contenu">
-          <%= link_to " Delete", "#", class: "btn btn-sm btn-danger bouton far fa-trash-alt", remote: true %>
-          <h3><%= email.object %></h3>
-          <hr>
-          <p><%= email.body %></p>
-          </div>
-        <% end %>
+        <%= render 'email/contenu' %>
       </div>
     </div>
   </div>
