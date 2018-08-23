@@ -10,6 +10,7 @@ class EmailsController < ApplicationController
 
   def destroy
     @email = Email.destroy(params[:id])
+    redirect_to root_path
   end
 
 private
