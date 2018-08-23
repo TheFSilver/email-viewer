@@ -4,7 +4,7 @@
       <div class="col-3 liste">
         <div class="list-group">
           <% @email.each do |email| %>
-            <%= link_to "#{email.object}", email_path(email, email_id: email.id), class: 'show list-group-item list-group-item-action', remote: true, method: :delelte %>
+            <%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action', remote: true, method: :delelte %>
           <% end %>
         </div>
       </div>
