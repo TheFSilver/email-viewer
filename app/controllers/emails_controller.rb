@@ -1,7 +1,7 @@
 class EmailsController < ApplicationController
   before_action :all_emails, only: [:index, :destroy]
 	before_action :set_emails, only: [:destroy, :show]
-	respond_to :html, :js
+	respond_to? :html, :js
 
   def show
    @email.read = true
