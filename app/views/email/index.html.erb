@@ -1,11 +1,21 @@
-<section>
+<section class="content">
   <div class="container">
-    <div class="row">
-      <div class="col-4 liste">
-
+    <div class="row viewer">
+      <div class="col-3 liste">
+        <div class="list-group">
+          <% @email.each do |email| %>
+            <%= link_to "#{email.object}", "#", class: 'list-group-item list-group-item-action', remote: true %>
+          <% end %>
+        </div>
       </div>
-      <div class="col-8 contenu">
-        
+      <div class="col-9 ">
+        <% @email.each do |email| %>
+        <div class="container contenu">
+          <h3><%= email.object %></h3>
+          <hr>
+          <p><%= email.body %></p>
+        </div>
+            <% end %>
       </div>
     </div>
   </div>

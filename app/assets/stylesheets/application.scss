@@ -13,7 +13,21 @@
 
  // ici les compenents bootstrap spécifiques
  @import url("email.scss");
-@import url("components/footer.scss");
+ @import url("components/footer.scss");
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+// Navbar
+
+.navbar {
+  top: 0px;
+  background-color: #7d98f7 !important;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 10px;
+  z-index: 999;
+  a {
+    color: white !important ;
+  }
+}
