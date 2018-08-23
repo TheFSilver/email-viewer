@@ -16,6 +16,7 @@
   padding: 20px;
   margin-bottom: 10px;
   background-color: #e4eaff;
+
 }
 
 .liste {
@@ -29,4 +30,9 @@
 
 .list-group-item:active {
   background-color: #e4eaff !important;
+}
+
+.bouton {
+  float: right;
+  display: inline-block;
 }
