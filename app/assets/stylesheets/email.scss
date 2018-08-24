@@ -2,8 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+  background-image: linear-gradient(315deg, rgb(119, 78, 65) 0%, rgb(42, 84, 112) 74%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .content {
   margin-top: 100px;
+  height: 100vh;
 }
 
 .viewer {
@@ -15,18 +23,24 @@
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 10px;
-  background-color: #e4eaff;
-
+  background-color: rgba(#e8e8e8, 0.2);
+  color: white;
 }
 
 .liste {
   align-items: left;
   overflow: scroll;
-  height: 500px;
+  height: 430px;
+}
+.list-group-item{
+  background-color: rgba(#e8e8e8, 0.2) !important;
+  color: white !important;
+  border: none !important;
 }
 
+
 .list-group-item:hover {
-  background-color: #e4eaff !important;
+  background-color: rgba(#e8e8e8, 0.4) !important;
 }
 
 .list-group-item:active {

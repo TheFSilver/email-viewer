@@ -4,6 +4,7 @@ class EmailsController < ApplicationController
 	respond_to? :html, :js
 
   def show
+  @email = Email.find(params[:id])
    @email.read = true
    @email.save
   end
