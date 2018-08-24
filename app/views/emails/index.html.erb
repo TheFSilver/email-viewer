@@ -4,9 +4,7 @@
       <div class="col-3 liste">
         <div class="list-group">
           <% @email.each do |email| %>
-            <% if email.read == true %>
-              <%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action ur', remote: true %>
-            <% end %>
+            <%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action ur', id: email.id, remote: true %>
           <% end %>
         </div>
       </div>
