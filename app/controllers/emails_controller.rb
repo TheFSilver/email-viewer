@@ -8,14 +8,13 @@ class EmailsController < ApplicationController
   end
 
   def show
-  @email = Email.find(params[:id])
-   @email.read = true
-   @email.save
+    @email = Email.find(params[:id])
+    @email.read = true
+    @email.save
   end
 
   def destroy
     @email = Email.destroy(params[:id])
-    redirect_to root_path
   end
 
 private

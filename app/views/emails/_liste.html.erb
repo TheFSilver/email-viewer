@@ -1,7 +1,9 @@
+<ul>
 <% @email.each do |email| %>
   <% if email.read == false %>
-    <%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action ur', id: email.id, remote: true %>
+    <li><%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action ur', id: email.id, remote: true %></li>
   <% else %>
-    <%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action read', id: email.id, remote: true %>
+    <li><%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action read', id: email.id, remote: true %></li>
   <% end %>
 <% end %>
+</ul>

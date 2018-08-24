@@ -1,5 +1,6 @@
 $(document).ready(function() {
-$('.<%= email.id %>').html("<%= j (render email) %>");
-$(document).on('turbolinks:load', function(){
-  alert('Message supprimé !');
+    $('#show').empty();
+    $('.<%= email.id %>').html("<%= j (render email) %>");
+    $(document).on('turbolinks:load', function(){
+        alert('Message supprimé !');
 });
