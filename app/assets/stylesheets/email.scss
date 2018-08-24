@@ -2,16 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-body {
-  background-image: linear-gradient(315deg, rgb(119, 78, 65) 0%, rgb(42, 84, 112) 74%);
-  background-repeat: no-repeat;
-  background-size: cover;
+.btn-danger {
+    background-color: rgba(#e81414, 0.5) !important;
 }
 
 .content {
   margin-top: 100px;
-  height: 100vh;
+
 }
 
 .viewer {
