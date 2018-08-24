@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class EmailsControllerTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @email = Email.new(object: "Example Object", body: "some random text", read: false)
+    @email2 = emails(:one)
+  end
+
   test "should get index" do
     get '/'
     assert_response :success

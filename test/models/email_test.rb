@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class EmailTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @email = Email.new(object: "Example Object", body: "some random text", read: false)
+  end
+
+  test "should be valid" do
+    assert @email.valid?
+  end
+
 end
