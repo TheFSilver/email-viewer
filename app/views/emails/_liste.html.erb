@@ -1,0 +1,3 @@
+<% @email.each do |email| %>
+  <%= link_to "#{email.object}", email_path(email), class: 'show list-group-item list-group-item-action ur', id: email.id, remote: true %>
+<% end %>

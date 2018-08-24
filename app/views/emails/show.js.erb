@@ -2,8 +2,7 @@ $(document).ready(function() {
 // all custom jQuery will go here
 function renderPage() {
     $(".col-9").html("<%= j render 'contenu', id: @email.id %>");
-    $("#<%= @email.id %>").removeClass("ur");
-    $("#<%= @email.id %>").addClass("read");
+    $("#<%= @email.id %>").attr('class','show list-group-item list-group-item-action read');
 };
 
 renderPage();
