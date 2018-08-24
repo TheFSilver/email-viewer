@@ -1,5 +1,6 @@
 <div class="container contenu">
-  <%= link_to " Delete", email_path(@email), class: "btn btn-sm btn-danger bouton far fa-trash-alt", remote: true,  method: :delete %>
+  <%= link_to " Delete", email_path(@email), class: "btn btn-sm btn-danger bouton far fa-trash-alt", remote: true,  method: :delete, data: { confirm: "Are you sure?" } %>
+
   <h3><%= @email.object %></h3>
   <hr>
   <p><%= @email.body %></p>
