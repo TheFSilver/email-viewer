@@ -4,7 +4,6 @@ function renderPage() {
     $(".col-9").html("<%= j render 'contenu', id: @email.id %>");
     $("#<%= @email.id %>").attr('class','show list-group-item list-group-item-action read');
     
-});
 };
 
 renderPage();
