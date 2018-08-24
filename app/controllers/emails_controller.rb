@@ -3,6 +3,10 @@ class EmailsController < ApplicationController
 	before_action :set_emails, only: [:destroy, :show]
 	respond_to? :html, :js
 
+  def index
+    @emails = Email.all
+  end
+
   def show
   @email = Email.find(params[:id])
    @email.read = true
